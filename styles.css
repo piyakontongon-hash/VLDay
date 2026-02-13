@@ -388,72 +388,25 @@ body::before {
     }
 
 }
-/* iPad / Tablet */
+/* Fix tablet + IG browser height issue */
 @media (min-width: 768px) and (max-width: 1024px) {
 
+    #flower-section {
+        min-height: 100vh;
+        padding: 40px 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
     .flower-content {
-        gap: 50px;
-    }
-
-    .flower-image {
-        width: 300px;   /* ลดจาก desktop */
-    }
-
-    .side-img {
-        width: 200px;
-    }
-
-    .message {
-        max-width: 500px;
-        margin: 40px auto;
-        padding: 25px 35px;
-    }
-
-    .message p {
-        font-size: 22px;
+        transform: scale(0.9); /* ย่อทั้ง block ลงนิด */
     }
 
 }
 
-
-
-
-
-
-    
-
-
-
-
-
-/* Mobile */
-@media (max-width: 768px) {
-
-    .flower-content {
-        flex-direction: column;
-        gap: 30px;
-    }
-
-    .side-img {
-        display: none;
-    }
-
-    .flower-image {
-        width: 220px;
-        margin-top: 40px;
-    }
-
-    .message {
-        width: 85%;
-        margin: 20px auto;
-        padding: 25px;
-    }
-
-    .message p {
-        font-size: 20px;
-    }
-
 }
+
 
 
 
