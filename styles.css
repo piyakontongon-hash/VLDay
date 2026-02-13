@@ -384,7 +384,7 @@ body::before {
     }
 
     .message p {
-        font-size: 26px;
+        font-size: 20px;
     }
 
 }
@@ -424,6 +424,7 @@ body::before {
 
 
 }
+
 
 
 
