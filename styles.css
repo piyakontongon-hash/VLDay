@@ -218,7 +218,7 @@ body::before {
 
 
 .message p {
-    font-size: 26px;            /* ใหญ่ขึ้นนิดนึงให้เด่น */
+    font-size: 20px;            /* ใหญ่ขึ้นนิดนึงให้เด่น */
     font-weight: 600;           /* หนากว่าเดิม แต่ไม่แข็ง */
     margin: 8px 0;
     line-height: 1.6;
@@ -422,5 +422,6 @@ body::before {
     }
 
 }
+
 
 
