@@ -374,20 +374,17 @@ body::before {
 /* Desktop spacing */
 @media (min-width: 1024px) {
 
-    .flower-content {
-        gap: 80px; /* เพิ่มระยะระหว่างซ้าย-กลาง-ขวา */
-    }
-
     .flower-image {
-        width: 420px; /* ปรับให้พอดี ไม่บีบ */
-    }
-
-    .side-img {
-        width: 260px;
+        width: 360px;   /* จาก 420 → 360 */
     }
 
     .message {
-        margin-top: 40px; /* เว้นระยะจากดอกไม้ */
+        max-width: 650px;   /* เพิ่มความกว้าง */
+        margin: 50px auto 0;
+    }
+
+    .message p {
+        font-size: 26px;
     }
 
 }
@@ -405,22 +402,31 @@ body::before {
 /* Mobile */
 @media (max-width: 768px) {
 
-    .flower-image {
-        width: 250px;
+    .flower-content {
+        flex-direction: column;
+        gap: 30px;
     }
 
     .side-img {
-        width: 160px;
+        display: none;
+    }
+
+    .flower-image {
+        width: 220px;
+        margin-top: 40px;
+    }
+
+    .message {
+        width: 85%;
+        margin: 20px auto;
+        padding: 25px;
     }
 
     .message p {
-        font-size: 15px;
-    }
-
-    .music-card {
-        width: 90%;
+        font-size: 20px;
     }
 
 }
+
 
 
