@@ -389,7 +389,7 @@ body::before {
 
 }
 /* Fix tablet + IG browser height issue */
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 1024px) {
 
     #flower-section {
         min-height: 80vh;
@@ -406,6 +406,7 @@ body::before {
 }
 
 }
+
 
 
 
