@@ -389,23 +389,42 @@ body::before {
 
 }
 /* Fix tablet + IG browser height issue */
-@media (min-width: 1024px) {
+@media (min-width: 768px) and (max-width: 1024px) {
 
     #flower-section {
-        min-height: 80vh;
-        padding: 40px 0;
+        min-height: 100vh;
         display: flex;
         align-items: center;
         justify-content: center;
+        padding: 40px 20px;
     }
 
     .flower-content {
-        transform: scale(0.9); /* ย่อทั้ง block ลงนิด */
+        gap: 60px;
     }
 
-}
+    .flower-image {
+        width: 280px; /* ขนาดพอดี ไม่เล็กเกิน */
+    }
+
+    .side-img {
+        width: 200px;
+    }
+
+    .message {
+        max-width: 480px;
+        padding: 25px 35px;
+    }
+
+    .message p {
+        font-size: 22px;
+    }
+
+
+
 
 }
+
 
 
 
