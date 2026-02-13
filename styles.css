@@ -388,6 +388,33 @@ body::before {
     }
 
 }
+/* iPad / Tablet */
+@media (min-width: 768px) and (max-width: 1024px) {
+
+    .flower-content {
+        gap: 50px;
+    }
+
+    .flower-image {
+        width: 300px;   /* ลดจาก desktop */
+    }
+
+    .side-img {
+        width: 200px;
+    }
+
+    .message {
+        max-width: 500px;
+        margin: 40px auto;
+        padding: 25px 35px;
+    }
+
+    .message p {
+        font-size: 22px;
+    }
+
+}
+
 
 
 
@@ -427,6 +454,7 @@ body::before {
     }
 
 }
+
 
 
 
