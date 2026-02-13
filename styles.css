@@ -191,10 +191,10 @@ body::before {
 
 @keyframes floatAnimation {
     0%, 100% {
-        transform: translateX(-40px) translateY(0px);
+        transform: translateX(-30px) translateY(0px);
     }
     50% {
-        transform: translateX(-40px) translateY(-10px);
+        transform: translateX(-30px) translateY(-10px);
     }
 }
 
@@ -427,6 +427,7 @@ body::before {
     }
 
 }
+
 
 
 
