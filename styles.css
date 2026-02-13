@@ -371,6 +371,28 @@ body::before {
 .petal:nth-child(3) { left: 60%; animation-delay: 6s; }
 .petal:nth-child(4) { left: 80%; animation-delay: 9s; }
 
+/* Desktop spacing */
+@media (min-width: 1024px) {
+
+    .flower-content {
+        gap: 80px; /* เพิ่มระยะระหว่างซ้าย-กลาง-ขวา */
+    }
+
+    .flower-image {
+        width: 420px; /* ปรับให้พอดี ไม่บีบ */
+    }
+
+    .side-img {
+        width: 260px;
+    }
+
+    .message {
+        margin-top: 40px; /* เว้นระยะจากดอกไม้ */
+    }
+
+}
+
+
 
 
 
@@ -380,33 +402,25 @@ body::before {
 
 
 
-/* Mobile Responsive */
-@media (max-width: 600px) {
-    .landing-content h1 {
-        font-size: 1.8rem;
-        margin-bottom: 30px;
-    }
-
-    .reveal-button {
-        padding: 12px 30px;
-        font-size: 1rem;
-    }
+/* Mobile */
+@media (max-width: 768px) {
 
     .flower-image {
-        width: 440px;
-        height: 440px;
-        margin: 0 auto 30px auto;
+        width: 250px;
     }
 
-    .message {
-        padding: 25px 20px;
+    .side-img {
+        width: 160px;
     }
 
     .message p {
-        font-size: 1rem;
+        font-size: 20px;
     }
 
-    .message p:last-child {
-        font-size: 0.95rem;
+    .music-card {
+        width: 90%;
     }
+
 }
+
+
