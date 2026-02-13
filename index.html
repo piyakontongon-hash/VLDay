@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentine Message</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="petal">🌸</div>
+    <div class="petal">🌸</div>
+    <div class="petal">🌸</div>
+    <div class="petal">🌸</div>
+    <div class="floating-hearts"></div>
+    <div class="heart h1">💗</div>
+    <div class="heart h2">💖</div>
+    <div class="heart h3">💕</div>
+    <div class="heart h4">💞</div>
+
+    <div class="container">
+
+        <!-- หน้าแรก -->
+        <section id="landing" class="state active">
+            <div class="landing-content">
+                <h1>૮₍ • ᴥ • ₎ა</h1>
+                <button id="reveal-btn" class="reveal-button">
+                    กดตรงนี้เค้ามีไรจะให้
+                </button>
+            </div>
+        </section>
+
+        <!-- หน้า 2 -->
+        <section id="flower-section" class="state">
+            <div class="flower-content">
+
+                <img src="images/V1.png" class="side-img left" alt="left">
+
+                <div class="center-content">
+                    <img src="images/flower2.png" alt="flower" class="flower-image">
+
+                    <div class="message">
+                        <p>💗You make my heart smile💗</p>
+                        <p>💗This is for u💗</p>
+                    </div>
+
+                    <!-- 🎵 Music Widget -->
+                     <!-- 🔥 วางตรงนี้ -->
+    <div class="music-card">
+        <div class="music-left">
+            <div class="album-art"></div>
+            <div class="track-info">
+                <p class="track-title">จีบ</p>
+                <p class="artist">QLER</p>
+            </div>
+        </div>
+
+        <button id="toggle-music" class="play-btn">▶</button>
+    </div>
+
+    <audio id="bg-music" src="music/jeeb.mp3"></audio>
+
+                </div>
+
+                <img src="images/V2.png" class="side-img right" alt="right">
+
+            </div>
+        </section>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

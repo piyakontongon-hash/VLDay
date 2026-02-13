@@ -1,0 +1,412 @@
+:root {
+    --primary-light: #ffe5ec;
+    --primary: #ffb3d9;
+    --primary-dark: #ff80bf;
+    --accent: #ff6b9d;
+    --text-dark: #5a3a4a;
+    --text-light: #8b6b7b;
+    --bg: linear-gradient(135deg, #fff5f9 0%, #fff0f5 100%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+     background: linear-gradient(135deg, #fff5f9 0%, #ffeaf4 50%, #fff0f5 100%);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: var(--bg);
+    color: var(--text-dark);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: radial-gradient(circle at center, #fdf4f7 0%, #f6e6ec 40%, #ecd7df 100%);
+}
+body::before {
+    content: "";
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    background: rgba(255, 182, 193, 0.2);
+    border-radius: 50%;
+    filter: blur(120px);
+    top: 10%;
+    left: 20%;
+    z-index: -1;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.state {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.8s ease-in-out;
+    pointer-events: none;
+}
+
+.state.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+/* Landing State */
+.landing-content {
+    text-align: center;
+    max-width: 500px;
+    padding: 40px 20px;
+     font-size: 48px;
+    margin-bottom: 10px;
+}
+ .sub-text {
+    font-size: 16px;
+    opacity: 0.7;
+    margin-bottom: 25px;
+}
+
+
+.landing-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: var(--accent);
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+.reveal-button {
+    background: linear-gradient(135deg, var(--primary-dark) 0%, var(--accent) 100%);
+    color: white;
+    padding: 22px 75px;
+    font-size: 1.4rem;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 12px 30px rgba(255, 105, 180, 0.3);
+    transition: all 0.3s ease;
+    font-weight: 600;
+    
+}
+
+.reveal-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 35px rgba(255, 107, 157, 0.4);
+}
+
+.reveal-button:active {
+    transform: translateY(0);
+}
+
+/* Flower State */
+.flower-content {
+    display: flex;              /* สำคัญมาก */
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+    
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+.side-img {
+    width: 450px;
+    height: auto;
+    border-radius: 50%;
+    object-fit: cover;
+    opacity: 0.85;
+    transition: 0.3s ease;
+}
+
+.left {
+    transform: rotate(-3deg);
+}
+
+.right {
+    transform: rotate(3deg);
+}
+
+.left:hover {
+    transform: rotate(-3deg) scale(1.05);
+}
+
+.right:hover {
+    transform: rotate(3deg) scale(1.05);
+}
+
+
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.flower-image {
+    width: 600px;
+    height: 600px;
+    object-fit: contain;
+    margin: 0 auto 40px auto;
+    image-rendering: crisp-edges;
+    image-rendering: -webkit-optimize-contrast;
+    animation: floatAnimation 3s ease-in-out infinite;
+    display: block;
+    filter: drop-shadow(0 20px 40px rgba(0,0,0,0.08));
+    position: relative;
+    z-index: 1;
+    
+}
+.flower-image::before {
+    content: "";
+    position: absolute;
+    width: 650px;
+    height: 650px;
+    background: radial-gradient(circle, rgba(255, 192, 203, 0.35) 0%, transparent 70%);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    filter: blur(40px);
+    z-index: -1;
+}
+
+@keyframes floatAnimation {
+    0%, 100% {
+        transform: translateX(-50px) translateY(0px);
+    }
+    50% {
+        transform: translateX(-50px) translateY(-10px);
+    }
+}
+
+.message {
+    margin-top: 20px;
+    padding: 35px 70px;
+    border-radius: 25px;
+    background: rgba(255, 255, 255, 0.55);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255,255,255,0.4);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+    text-align: center;
+    animation: floatBox 6s ease-in-out infinite;
+   
+}
+
+@keyframes floatBox {
+    0%,100% { transform: translateY(0px); }
+    50% { transform: translateY(-8px); }
+}
+
+
+.message p {
+    font-size: 26px;            /* ใหญ่ขึ้นนิดนึงให้เด่น */
+    font-weight: 600;           /* หนากว่าเดิม แต่ไม่แข็ง */
+    margin: 8px 0;
+    line-height: 1.6;
+    letter-spacing: 0.6px;
+    color: #b35c85;             /* ชมพูหม่น ๆ ให้เข้าธีม */
+    
+    text-shadow: 
+        0 2px 10px rgba(255, 182, 193, 0.25); /* glow นุ่ม ๆ */
+}
+
+
+
+
+/* -------- Romantic Background Hearts -------- */
+body::before {
+    content: "";
+    position: fixed;
+    width: 800px;
+    height: 800px;
+    background: radial-gradient(circle, rgba(255,192,203,0.25) 0%, transparent 70%);
+    top: -200px;
+    left: 50%;
+    transform: translateX(-50%);
+    filter: blur(100px);
+    pointer-events: none;
+}
+
+.floating-hearts {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.heart {
+    position: absolute;
+    font-size: 20px;
+    opacity: 0.12;
+    animation: float 10s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%,100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+
+
+
+
+
+
+@keyframes floatHearts {
+    0%,100% { transform: translateY(0px); }
+    50% { transform: translateY(-40px); }
+}
+@keyframes fall {
+    0% {
+        transform: translateY(-100px) rotate(0deg);
+        opacity: 0;
+    }
+    20% { opacity: 0.4; }
+    100% {
+        transform: translateY(100vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+.music-widget {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.song-title {
+    font-size: 14px;
+    opacity: 0.8;
+    margin-bottom: 6px;
+}
+
+.music-btn {
+    padding: 8px 20px;
+    border-radius: 25px;
+    border: none;
+    cursor: pointer;
+}
+.music-card {
+    margin-top: 28px;
+    width: 390px;   /* เพิ่มจากเดิม */
+    padding: 16px 24px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    border-radius: 22px;
+    backdrop-filter: blur(20px);
+    background: rgba(255, 255, 255, 0.45);
+    box-shadow: 0 12px 35px rgba(0,0,0,0.08);
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.music-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.album-art {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    background: url('images/cover.jpg') center/cover;
+}
+
+.track-title {
+    margin: 0;
+    font-weight: 600;
+}
+
+.artist {
+    margin: 0;
+    font-size: 12px;
+    opacity: 0.6;
+}
+
+.play-btn {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    border: none;
+    background: white;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+
+
+
+.petal {
+    position: fixed;
+    top: -50px;
+    font-size: 50px;
+    animation: fall 12s linear infinite;
+    pointer-events: none;
+}
+
+.petal:nth-child(1) { left: 10%; animation-delay: 0s; }
+.petal:nth-child(2) { left: 30%; animation-delay: 3s; }
+.petal:nth-child(3) { left: 60%; animation-delay: 6s; }
+.petal:nth-child(4) { left: 80%; animation-delay: 9s; }
+
+
+
+
+    
+
+
+
+
+
+/* Mobile Responsive */
+@media (max-width: 600px) {
+    .landing-content h1 {
+        font-size: 1.8rem;
+        margin-bottom: 30px;
+    }
+
+    .reveal-button {
+        padding: 12px 30px;
+        font-size: 1rem;
+    }
+
+    .flower-image {
+        width: 440px;
+        height: 440px;
+        margin: 0 auto 30px auto;
+    }
+
+    .message {
+        padding: 25px 20px;
+    }
+
+    .message p {
+        font-size: 1rem;
+    }
+
+    .message p:last-child {
+        font-size: 0.95rem;
+    }
+}
